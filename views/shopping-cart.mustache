@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title></title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet" type="text/css" href="../css/app.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1>The Technology Store</h1>
+
+            <nav> account: {{username}}
+
+                <div>put a shopping cart symbol here</div>
+                <div> price: and items: </div>
+            </nav>
+            
+        </header>
+
+        <main>
+            <h1>Shopping Cart</h1>
+
+            <p>Welcome Back {{username}}!</p>
+
+            {{! <form action="/user/add-item" method="POST">
+                <h2>Add Item</h2>
+
+                <label>Item Name</label>
+                <input type="text" name="itemName" />
+
+                <label>Quantity</label>
+                <input type="number" name="itemQuantity" />
+
+                <input type="submit" value="Add Item" />
+            </form> }}
+
+            <fieldset>
+                <legend>Item List</legend>
+
+
+
+            {{#items}}
+
+                   
+                <form action="/user/remove-item" method="POST">
+                    <input type="hidden" name="itemName" value="{{name}}" /> 
+
+                    <label>Item:</label> {{name}}
+                    <label>Manufacturer:</label> {{manufacturer}}
+                    <label>price:</label> {{price}}
+                    <label>image:</label> {{image}}
+
+                    <input type="submit" value="remove" />
+                </form>
+            {{/items}}
+
+
+
+
+            </fieldset>
+        </main>
+
+        <footer>
+            <div>
+                <a href="/user/home">Home Page</a>
+            </div>
+
+            <div>
+                <a href="/user/apple">Apple Page</a>
+                <a href="/user/google">Google Page</a>
+                <a href="/user/samsung">Samsung Page</a>
+            </div>
+
+            <div>
+                <a href="/user/shopping-cart">Shopping Cart</a>
+            </div>
+
+            <div>
+                copyright: The Technology Store
+            </div>
+        </footer>
+    </body>
+
+    <script src=""></script>
+</html>
